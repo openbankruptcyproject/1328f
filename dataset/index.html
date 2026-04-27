@@ -3,27 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>§ 1328(f) Open Dataset — Open Bankruptcy Project</title>
-<meta name="description" content="Versioned, citable open dataset on § 1328(f) successive-filing patterns. CC BY 4.0.">
+<title>§ 1328(f) Open Dataset v0.1 — Open Bankruptcy Project</title>
+<meta name="description" content="Citable open dataset on §1328(f) successive-filing patterns. CC BY 4.0. Three CSVs (per-case, per-district, per-year).">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://1328f.openbankruptcyproject.org/dataset/">
-<meta property="og:title" content="§ 1328(f) Open Dataset — Open Bankruptcy Project">
-<meta property="og:description" content="Versioned, citable open dataset on § 1328(f) successive-filing patterns. CC BY 4.0.">
+<meta property="og:title" content="§ 1328(f) Open Dataset v0.1 — Open Bankruptcy Project">
+<meta property="og:description" content="Citable open dataset on §1328(f) successive-filing patterns. CC BY 4.0. Three CSVs (per-case, per-district, per-year).">
 <meta property="og:type" content="article">
-<meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
 <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-max-width:820px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
-h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}
-h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+max-width:880px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
 h3{font-size:1.1rem;margin:1.5rem 0 0.5rem}
 .lead{font-size:1.1rem;color:#444;margin:0 0 2rem}
 .tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
 .callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
 .callout h3{margin-top:0;color:#a07700}
 .related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
+.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
 table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
 th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:left}
 th{background:#f0f4f8}
@@ -33,57 +34,94 @@ nav.breadcrumb a{color:#0c5cb6}
 footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
 a{color:#0c5cb6}</style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"§ 1328(f) Open Dataset — Open Bankruptcy Project","description":"Versioned, citable open dataset on § 1328(f) successive-filing patterns. CC BY 4.0.","url":"https://1328f.openbankruptcyproject.org/dataset/"}
+{"@context":"https://schema.org","@type":"WebPage","name":"§ 1328(f) Open Dataset v0.1 — Open Bankruptcy Project","description":"Citable open dataset on §1328(f) successive-filing patterns. CC BY 4.0. Three CSVs (per-case, per-district, per-year).","url":"https://1328f.openbankruptcyproject.org/dataset/"}
 </script>
+<script type="application/ld+json">{
+"@context":"https://schema.org","@type":"Dataset",
+"name":"§ 1328(f) Successive-Filing Dataset v0.1",
+"description":"Empirical dataset of Chapter 13 successive-filing patterns and § 1328(f) lookback-bar incidence across 41 federal bankruptcy districts, 1990-2026. 211,537 cases analyzed; 1,018 § 1328(f) lookback-caught cases identified.",
+"url":"https://1328f.openbankruptcyproject.org/dataset/",
+"creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631","url":"https://openbankruptcyproject.org/"},
+"license":"https://creativecommons.org/licenses/by/4.0/",
+"datePublished":"2026-04-27",
+"keywords":["bankruptcy","§ 1328(f)","successive filing","Chapter 13","BAPCPA","empirical research"],
+"distribution":[
+{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://1328f.openbankruptcyproject.org/data/1328f_lookback_caught.csv"},
+{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://1328f.openbankruptcyproject.org/data/1328f_by_district.csv"},
+{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://1328f.openbankruptcyproject.org/data/1328f_by_year.csv"}
+]
+}</script>
 </head>
 <body>
 <nav class="breadcrumb"><a href="../">&sect; 1328(f) Hub</a> &raquo; Dataset</nav>
 <span class="tag">Open Bankruptcy Project</span>
-<h1>&sect; 1328(f) Dataset &mdash; Open Data</h1>
-<p class="lead">Versioned, citable open dataset on &sect; 1328(f) successive-filing patterns. CC BY 4.0 license &mdash; free use with attribution.</p>
+<h1>&sect; 1328(f) Dataset v0.1 &mdash; Open Data</h1>
+<p class="lead">Versioned, citable open dataset on &sect; 1328(f) successive-filing patterns.
+First public release: 2026-04-27. License: CC BY 4.0.</p>
 
-<h2>Status</h2>
-<p>Dataset assembly is in progress. The first public release will include:</p>
-<ul>
-<li>Per-district successive-Ch.13 filing counts by year</li>
-<li>Estimated lookback-bar incidence rates (where docket text supports classification)</li>
-<li>Pro-se vs. attorney-represented breakdown</li>
-<li>Plan completion rate among lookback-flagged cases</li>
-</ul>
+<h2>Contents</h2>
 
-<p>Source data: BAPCPA Table 6 (Administrative Office), FJC IDB, and targeted PACER docket pulls via CourtListener / RECAP.</p>
+<h3>1. <a href="/data/1328f_lookback_caught.csv">1328f_lookback_caught.csv</a> &mdash; 1,018 rows</h3>
+<p>One row per Ch.13 case identified as within the &sect; 1328(f) lookback window from a prior discharge.
+Columns: current_district, current_year, current_chapter, prior_chapter, days_between, lookback_period_days,
+lookback_triggered.</p>
 
-<h2>Citation</h2>
-<p>When the first dataset version is published, the citation format will be:</p>
-<pre style="background:#f0f0f0;padding:0.75rem;border-radius:4px;font-size:0.9rem">Open Bankruptcy Project (2026). &sect; 1328(f) Successive-Filing Dataset, v1.0.
-Open Bankruptcy Project, 501(c)(3) public charity (EIN 41-5159631).
+<h3>2. <a href="/data/1328f_by_district.csv">1328f_by_district.csv</a> &mdash; 41 rows</h3>
+<p>Aggregate per-district counts and rates. Columns: district, ch13_total, prior_within_lookback,
+prior_outside_lookback, no_prior, pct_caught_of_prior.</p>
+
+<h3>3. <a href="/data/1328f_by_year.csv">1328f_by_year.csv</a> &mdash; 37 rows</h3>
+<p>Year-by-year trend data 1990-2026. Columns: year, ch13_total, prior_within_lookback,
+prior_outside_lookback.</p>
+
+<h2>Citation format</h2>
+<pre style="background:#f0f0f0;padding:0.75rem;border-radius:4px;font-size:0.9rem">Open Bankruptcy Project (2026). § 1328(f) Successive-Filing Dataset, v0.1.
+501(c)(3) public charity (EIN 41-5159631).
 URL: https://1328f.openbankruptcyproject.org/dataset/
-License: CC BY 4.0</pre>
+License: CC BY 4.0
+Cutoff: 2026-04-27. Methodology: see /methodology/.</pre>
 
-<h2>Companion datasets</h2>
-<p>This research builds on and complements other OBP empirical work:</p>
+<h2>What's in v0.1</h2>
 <ul>
-<li><a href="https://523a8.openbankruptcyproject.org/">&sect; 523(a)(8) AP filings dataset</a> &mdash; student-loan dischargeability adversary proceedings</li>
-<li><a href="https://viz.openbankruptcyproject.org/dismissal-rate-by-district/">Chapter 13 dismissal-rate map</a> &mdash; FY2023 district-level visualization</li>
-<li><a href="https://viz.openbankruptcyproject.org/subv-adoption-curve/">Subchapter V adoption curve</a> &mdash; quarterly Sub V volume</li>
+<li>211,537 cases across 41 federal bankruptcy districts, 1990-2026</li>
+<li>199,848 unique normalized debtor names</li>
+<li>10,021 unique successive filers (2+ cases under the same name)</li>
+<li>1,018 cases identified as within the &sect; 1328(f) lookback distance from a prior discharge</li>
+<li>Per-district + per-year aggregations</li>
 </ul>
 
-<h2>Contributions welcome</h2>
-<p>If you have access to docket data we don't have, or notice classification errors in our methodology, contact <a href="mailto:research@openbankruptcyproject.org">research@openbankruptcyproject.org</a>. Dataset improvements are credited in the version history.</p>
+<h2>What's NOT in v0.1 (planned for v0.2+)</h2>
+<ul>
+<li>SSN-based matching (currently using name-only matching with known false-positive risk)</li>
+<li>Pro-se vs. attorney-represented breakdown (requires docket-text classification)</li>
+<li>"Plan completed without discharge" outcome flag (requires terminal docket-entry analysis)</li>
+<li>National coverage (currently focused on the heavier-monitored districts)</li>
+</ul>
+
+<h2>Methodology</h2>
+<p>Detailed methodology is at <a href="../methodology/">/methodology/</a>. Key points:</p>
+<ul>
+<li>Cases pulled from PACER via CourtListener / RECAP and direct district-court ECF</li>
+<li>Successive-filer matching by normalized debtor name (uppercase, punctuation stripped)</li>
+<li>Discharge-event identification by date_discharged field on the case record</li>
+<li>Lookback period: 4 years for prior Ch.7/11/12 discharge; 2 years for prior Ch.13 discharge per &sect; 1328(f)(1)/(2)</li>
+</ul>
+
+<h2>Code</h2>
+<p>The analysis script is in the <a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">obp-empirical-toolkit</a> open-source repository.</p>
 <div class="related">
-<strong>Related research:</strong>
-<a href="https://1328f.openbankruptcyproject.org/">§ 1328(f) successive filing</a> &middot;
-<a href="https://subv.openbankruptcyproject.org/">Subchapter V</a> &middot;
-<a href="https://means-test.openbankruptcyproject.org/">Means test</a> &middot;
-<a href="https://automatic-stay.openbankruptcyproject.org/">Automatic stay</a> &middot;
-<a href="https://523a8.openbankruptcyproject.org/">§ 523(a)(8)</a> &middot;
-<a href="https://eidl.openbankruptcyproject.org/">EIDL</a> &middot;
-<a href="https://studentloans.openbankruptcyproject.org/">Student loans</a> &middot;
-<a href="https://viz.openbankruptcyproject.org/">Visualizations</a>
+<strong>Related:</strong>
+<a href="https://1328f.openbankruptcyproject.org/">§ 1328(f) hub</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/methodology/">Methodology</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/findings/">Findings</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/findings/by-district/">By district</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/findings/lookback-effect/">Lookback effect</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/dataset/">Dataset</a> &middot;
+<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Toolkit</a>
 </div>
 <footer>
-<p>Educational content only. Not legal advice. <strong>Open Bankruptcy Project</strong> &mdash;
-501(c)(3) public charity (EIN 41-5159631).
+<p>Empirical research published under CC BY 4.0. Methodology versioned in the public repository.
+Educational only; not legal advice. <strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
 <a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
 </footer>
 </body>
