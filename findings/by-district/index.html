@@ -3,27 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>§ 1328(f) Patterns by District — Open Bankruptcy Project</title>
-<meta name="description" content="Per-district successive-Ch.13 filing patterns; pro-se prevalence; geographic variation.">
+<title>§ 1328(f) Patterns by District (v0.1) — Open Bankruptcy Project</title>
+<meta name="description" content="Per-district §1328(f) lookback patterns from the 211,537-case sample. Florida 18.7%, Kansas 16.5%, Missouri Western 9.1%.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://1328f.openbankruptcyproject.org/findings/by-district/">
-<meta property="og:title" content="§ 1328(f) Patterns by District — Open Bankruptcy Project">
-<meta property="og:description" content="Per-district successive-Ch.13 filing patterns; pro-se prevalence; geographic variation.">
+<meta property="og:title" content="§ 1328(f) Patterns by District (v0.1) — Open Bankruptcy Project">
+<meta property="og:description" content="Per-district §1328(f) lookback patterns from the 211,537-case sample. Florida 18.7%, Kansas 16.5%, Missouri Western 9.1%.">
 <meta property="og:type" content="article">
-<meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
 <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-max-width:820px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
-h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}
-h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+max-width:880px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
 h3{font-size:1.1rem;margin:1.5rem 0 0.5rem}
 .lead{font-size:1.1rem;color:#444;margin:0 0 2rem}
 .tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
 .callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
 .callout h3{margin-top:0;color:#a07700}
 .related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
+.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
 table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
 th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:left}
 th{background:#f0f4f8}
@@ -33,45 +34,89 @@ nav.breadcrumb a{color:#0c5cb6}
 footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
 a{color:#0c5cb6}</style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"§ 1328(f) Patterns by District — Open Bankruptcy Project","description":"Per-district successive-Ch.13 filing patterns; pro-se prevalence; geographic variation.","url":"https://1328f.openbankruptcyproject.org/findings/by-district/"}
+{"@context":"https://schema.org","@type":"WebPage","name":"§ 1328(f) Patterns by District (v0.1) — Open Bankruptcy Project","description":"Per-district §1328(f) lookback patterns from the 211,537-case sample. Florida 18.7%, Kansas 16.5%, Missouri Western 9.1%.","url":"https://1328f.openbankruptcyproject.org/findings/by-district/"}
 </script>
+<script type="application/ld+json">{
+"@context":"https://schema.org","@type":"Dataset",
+"name":"§ 1328(f) Successive-Filing Dataset v0.1",
+"description":"Empirical dataset of Chapter 13 successive-filing patterns and § 1328(f) lookback-bar incidence across 41 federal bankruptcy districts, 1990-2026. 211,537 cases analyzed; 1,018 § 1328(f) lookback-caught cases identified.",
+"url":"https://1328f.openbankruptcyproject.org/dataset/",
+"creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631","url":"https://openbankruptcyproject.org/"},
+"license":"https://creativecommons.org/licenses/by/4.0/",
+"datePublished":"2026-04-27",
+"keywords":["bankruptcy","§ 1328(f)","successive filing","Chapter 13","BAPCPA","empirical research"],
+"distribution":[
+{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://1328f.openbankruptcyproject.org/data/1328f_lookback_caught.csv"},
+{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://1328f.openbankruptcyproject.org/data/1328f_by_district.csv"},
+{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://1328f.openbankruptcyproject.org/data/1328f_by_year.csv"}
+]
+}</script>
 </head>
 <body>
 <nav class="breadcrumb"><a href="../../">&sect; 1328(f) Hub</a> &raquo; <a href="../">Findings</a> &raquo; By District</nav>
 <span class="tag">Open Bankruptcy Project</span>
-<h1>&sect; 1328(f) Patterns by District</h1>
-<p class="lead">Successive-filing rates and lookback-bar incidence vary substantially across the 90 federal bankruptcy districts. This page tracks per-district patterns based on BAPCPA Table 6 + targeted PACER pulls.</p>
+<h1>&sect; 1328(f) Patterns by District &mdash; v0.1</h1>
+<p class="lead">Per-district patterns from the v0.1 dataset. Within-sample percentages (caught/total-with-prior)
+are sampling-bias resistant; absolute counts reflect data-collection focus and are not national-prevalence
+estimates.</p>
 
-<h2>The geography of successive Chapter 13 filings</h2>
-<p>Successive Ch.13 filings are concentrated in a small number of high-volume districts. The pattern correlates with overall Ch.13 filing rates: districts with the most Chapter 13 cases also have the most successive filings, both in absolute numbers and as a fraction of total filings.</p>
+<div class="callout">
+<h3>About the data-collection bias</h3>
+<p>The dataset is over-represented in districts where the OBP project has done heavier PACER monitoring.
+The "% of successive filers caught" rate within each district is the meaningful comparison; the raw
+counts should not be read as national-prevalence rankings.</p>
+</div>
 
-<p>Patterns observed in preliminary analysis:</p>
+<h2>Per-district rates of &sect; 1328(f)-relevant patterns</h2>
+<table>
+<tr><th>District</th><th>Ch.13 cases (sample)</th><th>Within lookback</th><th>Outside lookback</th><th>% caught of those with prior</th></tr>
+<tr><td>flsbk</td><td>2,261</td><td>233</td><td>1,013</td><td>18.7%</td></tr>
+<tr><td>ksbk</td><td>3,711</td><td>353</td><td>1,785</td><td>16.5%</td></tr>
+<tr><td>mowbk</td><td>3,994</td><td>196</td><td>1,959</td><td>9.1%</td></tr>
+<tr><td>txsbk</td><td>3,732</td><td>149</td><td>1,829</td><td>7.5%</td></tr>
+<tr><td>ilnbk</td><td>337</td><td>19</td><td>154</td><td>11.0%</td></tr>
+<tr><td>cacbk</td><td>176</td><td>10</td><td>95</td><td>9.5%</td></tr>
+<tr><td>flmbk</td><td>244</td><td>8</td><td>114</td><td>6.6%</td></tr>
+<tr><td>tnwbk</td><td>243</td><td>7</td><td>120</td><td>5.5%</td></tr>
+<tr><td>insbk</td><td>48</td><td>6</td><td>20</td><td>23.1%</td></tr>
+<tr><td>njbk</td><td>89</td><td>5</td><td>47</td><td>9.6%</td></tr>
+</table>
+
+<h2>Reading the table</h2>
 <ul>
-<li><strong>Southeast circuit (4th, 5th, 11th):</strong> highest absolute volume of successive Ch.13 filings. Likely correlates with the South's Chapter-13-heavy filing culture.</li>
-<li><strong>Northern districts (1st, 2nd, 6th):</strong> lower absolute volume but similar percentage rates &mdash; debtors there usually file Ch.7 first.</li>
-<li><strong>Western districts (9th, 10th):</strong> mixed; some districts (D. Az., D. Nev.) have moderate Ch.13 share with high successive-filing rates.</li>
+<li><strong>"Within lookback"</strong> = Ch.13 cases where a prior discharge fell inside the &sect; 1328(f)
+window (4 years for Ch.7/11/12, 2 years for Ch.13)</li>
+<li><strong>"Outside lookback"</strong> = Ch.13 cases with prior history but no discharge in the lookback
+window (i.e., the prior was dismissed, or far enough back that the rule doesn't apply)</li>
+<li><strong>"% caught"</strong> = within-lookback / (within + outside). The within-sample rate.</li>
 </ul>
 
-<h2>Pro-se prevalence by district</h2>
-<p>The fraction of pro-se Chapter 13 filings (no attorney of record at filing) varies enormously across districts. Districts with high pro-se rates also see disproportionate &sect; 1328(f) lookback issues, because pro-se filers are most likely to be unaware of the rule.</p>
-<p>This research will publish per-district pro-se rate + lookback-encounter rate as a paired statistic when the underlying PACER pulls complete.</p>
+<h2>What the patterns suggest</h2>
+<p>Within-sample patterns hold across the heavier-monitored districts:</p>
+<ul>
+<li>Florida and Kansas show the highest "% caught" rates (16-19%) among the heavily-sampled districts.
+This may reflect higher pro-se filing rates, more aggressive Ch.13 successive-filing culture, or both.</li>
+<li>Missouri Western and Texas Southern show lower rates (7-9%), suggesting more attorney-represented
+filings where pre-petition lookback screening is routine.</li>
+<li>Smaller-sample districts (insbk, ohnbk, wiebk) show high rates (23-27%) but with low absolute counts;
+these warrant follow-up before any conclusions.</li>
+</ul>
 
-<h2>Filing fee waiver patterns</h2>
-<p>Districts where Chapter 7 filing fees are routinely waived under &sect; 1930(f)(3) interact with &sect; 1328(f) in a subtle way: a debtor who got a Ch.7 fee waiver and discharge cannot use Ch.13 within 4 years. The fee-waiver path may give the impression that bankruptcy is "easier" than it actually is for repeat filers.</p>
+<h2>Open dataset</h2>
+<p>Per-district counts and rates are available as CSV: <a href="../../dataset/">dataset page</a>.</p>
 <div class="related">
-<strong>Related research:</strong>
-<a href="https://1328f.openbankruptcyproject.org/">§ 1328(f) successive filing</a> &middot;
-<a href="https://subv.openbankruptcyproject.org/">Subchapter V</a> &middot;
-<a href="https://means-test.openbankruptcyproject.org/">Means test</a> &middot;
-<a href="https://automatic-stay.openbankruptcyproject.org/">Automatic stay</a> &middot;
-<a href="https://523a8.openbankruptcyproject.org/">§ 523(a)(8)</a> &middot;
-<a href="https://eidl.openbankruptcyproject.org/">EIDL</a> &middot;
-<a href="https://studentloans.openbankruptcyproject.org/">Student loans</a> &middot;
-<a href="https://viz.openbankruptcyproject.org/">Visualizations</a>
+<strong>Related:</strong>
+<a href="https://1328f.openbankruptcyproject.org/">§ 1328(f) hub</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/methodology/">Methodology</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/findings/">Findings</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/findings/by-district/">By district</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/findings/lookback-effect/">Lookback effect</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/dataset/">Dataset</a> &middot;
+<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Toolkit</a>
 </div>
 <footer>
-<p>Educational content only. Not legal advice. <strong>Open Bankruptcy Project</strong> &mdash;
-501(c)(3) public charity (EIN 41-5159631).
+<p>Empirical research published under CC BY 4.0. Methodology versioned in the public repository.
+Educational only; not legal advice. <strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
 <a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
 </footer>
 </body>
