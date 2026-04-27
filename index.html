@@ -4,27 +4,91 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>§ 1328(f) Successive Filing Research — Open Bankruptcy Project</title>
-<meta name="description" content="Empirical research on 11 U.S.C. § 1328(f) successive-filing rules and their effect on Chapter 13 discharge eligibility. Open dataset, methodology, and per-">
+<meta name="description" content="Empirical research on 11 U.S.C. § 1328(f) successive-filing rules and Chapter 13 discharge eligibility.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://1328f.openbankruptcyproject.org/">
 <meta property="og:title" content="§ 1328(f) Successive Filing Research — Open Bankruptcy Project">
-<meta property="og:description" content="Empirical research on 11 U.S.C. § 1328(f) successive-filing rules and their effect on Chapter 13 discharge eligibility. Open dataset, methodology, and per-">
-<meta property="og:type" content="website">
+<meta property="og:description" content="Empirical research on 11 U.S.C. § 1328(f) successive-filing rules and Chapter 13 discharge eligibility.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
-<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:780px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}h1{font-size:1.95rem;line-height:1.2;margin:0 0 0.5rem}.lead{font-size:1.1rem;color:#444;margin:0 0 2rem}.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}a{color:#0c5cb6}</style>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+max-width:820px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}
+h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+h3{font-size:1.1rem;margin:1.5rem 0 0.5rem}
+.lead{font-size:1.1rem;color:#444;margin:0 0 2rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.callout h3{margin-top:0;color:#a07700}
+.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
+th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:left}
+th{background:#f0f4f8}
+ul,ol{padding-left:1.25rem}
+nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
+nav.breadcrumb a{color:#0c5cb6}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
+a{color:#0c5cb6}</style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"§ 1328(f) Successive Filing Research — Open Bankruptcy Project","description":"Empirical research on 11 U.S.C. § 1328(f) successive-filing rules and their effect on Chapter 13 discharge eligibility. Open dataset, methodology, and per-","url":"https://1328f.openbankruptcyproject.org/"}
+{"@context":"https://schema.org","@type":"WebPage","name":"§ 1328(f) Successive Filing Research — Open Bankruptcy Project","description":"Empirical research on 11 U.S.C. § 1328(f) successive-filing rules and Chapter 13 discharge eligibility.","url":"https://1328f.openbankruptcyproject.org/"}
 </script>
 </head>
 <body>
 <span class="tag">Open Bankruptcy Project</span>
-<h1>§ 1328(f) Successive Filing — Empirical Research</h1>
-<p class="lead">Empirical research on 11 U.S.C. § 1328(f) successive-filing rules and their effect on Chapter 13 discharge eligibility. Open dataset, methodology, and per-district patterns. Educational, not legal advice.</p>
-<p><strong>Status:</strong> Hub under construction. Empirical research and educational content in preparation. Check back shortly.</p>
+<h1>&sect; 1328(f) &mdash; Successive Filing and Discharge Eligibility</h1>
+<p class="lead">11 U.S.C. &sect; 1328(f) bars Chapter 13 discharge if the debtor received a discharge in an earlier case within specified lookback periods. This research project tracks how the rule operates across districts, the empirical patterns in successive-filing eligibility decisions, and the consequences for debtors caught by the lookback.</p>
+
+<h2>The statutory rule</h2>
+<p>Section 1328(f) provides that the court shall not grant a discharge of all debts under &sect; 1328 if the debtor has received a discharge:</p>
+<ul>
+<li><strong>(f)(1):</strong> in a case filed under Chapter 7, 11, or 12 during the <strong>4-year</strong> period preceding the date of the order for relief, or</li>
+<li><strong>(f)(2):</strong> in a case filed under Chapter 13 during the <strong>2-year</strong> period preceding the date of the order for relief.</li>
+</ul>
+<p>The rule is a categorical bar; it does not turn on the debtor's good faith, hardship, or any other discretionary factor. If the lookback applies, discharge is unavailable.</p>
+
+<h2>Why this research matters</h2>
+<p>Many debtors file successive Chapter 13 cases without realizing the lookback applies. By the time the court reaches discharge, the debtor has paid 3-5 years of plan payments and learns at the discharge stage that no discharge will issue. The plan completion still confers some benefits (the automatic stay protected payments, secured debts may have been cured, etc.) but the unsecured debt remaining is not eliminated.</p>
+
+<p>Empirical questions this research addresses:</p>
+<ul>
+<li>How often do bankruptcy filings trigger the &sect; 1328(f) lookback?</li>
+<li>What fraction of caught-by-lookback debtors complete the plan anyway?</li>
+<li>Do districts vary in how they screen for the lookback at the petition stage vs. at discharge?</li>
+<li>What were the policy effects of BAPCPA's introduction of the rule in 2005?</li>
+</ul>
+
+<h2>Read more</h2>
+<ul>
+<li><a href="methodology/">Methodology</a> &mdash; how the dataset is assembled</li>
+<li><a href="findings/">Findings</a> &mdash; current empirical results</li>
+<li><a href="findings/by-district/">By district</a> &mdash; per-district patterns</li>
+<li><a href="findings/lookback-effect/">The lookback effect</a> &mdash; pre/post BAPCPA analysis</li>
+<li><a href="dataset/">Dataset</a> &mdash; open data download</li>
+</ul>
+
+<h2>Related work</h2>
+<p>The &sect; 1328(f) bar interacts with the automatic-stay limits under &sect; 362(c)(3)/(4) for repeat filers (the stay terminates earlier or doesn't apply at all when there's a recent prior dismissal). See the
+<a href="https://automatic-stay.openbankruptcyproject.org/successive-filings/">automatic-stay successive-filings reference</a>.</p>
+
+<p>The Rules Committee has begun work on a procedural complement: <em>26-BK-3</em>, accepted March 2026 by the Advisory Committee on Bankruptcy Rules, addresses Rule 4004 / 1328(f) screening at the petition stage. Citation in committee record references this empirical research as foundational.</p>
+<div class="related">
+<strong>Related research:</strong>
+<a href="https://1328f.openbankruptcyproject.org/">§ 1328(f) successive filing</a> &middot;
+<a href="https://subv.openbankruptcyproject.org/">Subchapter V</a> &middot;
+<a href="https://means-test.openbankruptcyproject.org/">Means test</a> &middot;
+<a href="https://automatic-stay.openbankruptcyproject.org/">Automatic stay</a> &middot;
+<a href="https://523a8.openbankruptcyproject.org/">§ 523(a)(8)</a> &middot;
+<a href="https://eidl.openbankruptcyproject.org/">EIDL</a> &middot;
+<a href="https://studentloans.openbankruptcyproject.org/">Student loans</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/">Visualizations</a>
+</div>
 <footer>
-<p>Educational only. Not legal advice. <strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631). <a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+<p>Educational content only. Not legal advice. <strong>Open Bankruptcy Project</strong> &mdash;
+501(c)(3) public charity (EIN 41-5159631).
+<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
 </footer>
 </body>
 </html>
