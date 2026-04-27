@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>§ 1328(f) Methodology — Open Bankruptcy Project</title>
+<meta name="description" content="Methodology for assembling the § 1328(f) successive-filing dataset: BAPCPA Table 6, FJC IDB, CourtListener, and PACER.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://1328f.openbankruptcyproject.org/methodology/">
+<meta property="og:title" content="§ 1328(f) Methodology — Open Bankruptcy Project">
+<meta property="og:description" content="Methodology for assembling the § 1328(f) successive-filing dataset: BAPCPA Table 6, FJC IDB, CourtListener, and PACER.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+max-width:820px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}
+h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+h3{font-size:1.1rem;margin:1.5rem 0 0.5rem}
+.lead{font-size:1.1rem;color:#444;margin:0 0 2rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.callout h3{margin-top:0;color:#a07700}
+.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
+th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:left}
+th{background:#f0f4f8}
+ul,ol{padding-left:1.25rem}
+nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
+nav.breadcrumb a{color:#0c5cb6}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
+a{color:#0c5cb6}</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"§ 1328(f) Methodology — Open Bankruptcy Project","description":"Methodology for assembling the § 1328(f) successive-filing dataset: BAPCPA Table 6, FJC IDB, CourtListener, and PACER.","url":"https://1328f.openbankruptcyproject.org/methodology/"}
+</script>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">&sect; 1328(f) Hub</a> &raquo; Methodology</nav>
+<span class="tag">Open Bankruptcy Project</span>
+<h1>Methodology &mdash; &sect; 1328(f) Dataset</h1>
+<p class="lead">How we assemble the empirical dataset on &sect; 1328(f) successive-filing patterns. All sources are public; the methodology is versioned and citable.</p>
+
+<h2>Data sources</h2>
+<table>
+<tr><th>Source</th><th>What it provides</th></tr>
+<tr><td>BAPCPA Table 6 (Administrative Office of U.S. Courts)</td><td>Annual case-disposition data by district. Provides discharged / dismissed counts.</td></tr>
+<tr><td>Federal Judicial Center IDB</td><td>Case-level public dataset (filing date, district, chapter, disposition).</td></tr>
+<tr><td>CourtListener / RECAP</td><td>Docket-level pulls, particularly for cases involving discharge orders that name &sect; 1328(f).</td></tr>
+<tr><td>PACER (limited, fee-based)</td><td>Targeted document pulls where docket text indicates lookback issue.</td></tr>
+</table>
+
+<h2>Identifying lookback cases</h2>
+<p>A case is flagged as a candidate for &sect; 1328(f) treatment when:</p>
+<ol>
+<li>The filing date is within 4 years (Ch.7/11/12) or 2 years (Ch.13) of an earlier case for the same debtor (matched on SSN where available, debtor name + address otherwise).</li>
+<li>The earlier case received a discharge order (not just a dismissal).</li>
+<li>The current case is a Chapter 13 (because &sect; 1328(f) only bars Ch.13 discharge).</li>
+</ol>
+
+<p>Outcomes are then classified by reading the discharge order or final docket text:</p>
+<ul>
+<li><strong>Discharge issued:</strong> court did not apply &sect; 1328(f) (typically because the prior case was outside the lookback or did not actually result in discharge despite appearance)</li>
+<li><strong>Discharge denied (1328(f)):</strong> court applied the lookback bar</li>
+<li><strong>Plan completed without discharge:</strong> debtor finished plan payments but no discharge issued (often a 1328(f) case)</li>
+<li><strong>Case dismissed before discharge stage:</strong> outcome turns on dismissal grounds, not on 1328(f) per se</li>
+</ul>
+
+<h2>Limitations</h2>
+<ul>
+<li><strong>SSN matching:</strong> not always reliable; FJC data masks SSN, name+address matching has false positives.</li>
+<li><strong>Pro-se debtors:</strong> overrepresented in lookback-caught populations; the rule is one of the most common pro-se traps.</li>
+<li><strong>Pre-BAPCPA baseline:</strong> &sect; 1328(f) was introduced in 2005; pre-2005 there was no equivalent bar, so historical comparison is not direct.</li>
+</ul>
+
+<h2>Versioning</h2>
+<p>Each release of the dataset is tagged in the public repository with the data-cutoff date and a methodology hash. Citation format and DOI (when assigned) are provided in the dataset README.</p>
+<div class="related">
+<strong>Related research:</strong>
+<a href="https://1328f.openbankruptcyproject.org/">§ 1328(f) successive filing</a> &middot;
+<a href="https://subv.openbankruptcyproject.org/">Subchapter V</a> &middot;
+<a href="https://means-test.openbankruptcyproject.org/">Means test</a> &middot;
+<a href="https://automatic-stay.openbankruptcyproject.org/">Automatic stay</a> &middot;
+<a href="https://523a8.openbankruptcyproject.org/">§ 523(a)(8)</a> &middot;
+<a href="https://eidl.openbankruptcyproject.org/">EIDL</a> &middot;
+<a href="https://studentloans.openbankruptcyproject.org/">Student loans</a> &middot;
+<a href="https://viz.openbankruptcyproject.org/">Visualizations</a>
+</div>
+<footer>
+<p>Educational content only. Not legal advice. <strong>Open Bankruptcy Project</strong> &mdash;
+501(c)(3) public charity (EIN 41-5159631).
+<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+</footer>
+</body>
+</html>
