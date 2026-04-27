@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://1328f.openbankruptcyproject.org/sitemap.xml
