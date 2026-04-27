@@ -4,26 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pre/Post BAPCPA Lookback Effect — Open Bankruptcy Project</title>
-<meta name="description" content="Empirical analysis of the § 1328(f) lookback rule's effect on successive Chapter 13 filings since 2005.">
+<meta name="description" content="Empirical pre/post BAPCPA analysis: counterfactual ~28% in early 1990s vs. 5-7% post-2005. Procedural reform under 26-BK-3.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://1328f.openbankruptcyproject.org/findings/lookback-effect/">
 <meta property="og:title" content="Pre/Post BAPCPA Lookback Effect — Open Bankruptcy Project">
-<meta property="og:description" content="Empirical analysis of the § 1328(f) lookback rule's effect on successive Chapter 13 filings since 2005.">
+<meta property="og:description" content="Empirical pre/post BAPCPA analysis: counterfactual ~28% in early 1990s vs. 5-7% post-2005. Procedural reform under 26-BK-3.">
 <meta property="og:type" content="article">
-<meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
 <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-max-width:820px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
-h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}
-h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+max-width:880px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;line-height:1.2;margin:0 0 0.5rem}h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
 h3{font-size:1.1rem;margin:1.5rem 0 0.5rem}
 .lead{font-size:1.1rem;color:#444;margin:0 0 2rem}
 .tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
 .callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;border-radius:0 4px 4px 0;margin:1.5rem 0}
 .callout h3{margin-top:0;color:#a07700}
 .related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat{padding:1.5rem;background:#fff;border:1px solid #ddd;border-left:4px solid #0c5cb6;border-radius:0 4px 4px 0;margin:1.5rem 0}
+.headline-stat .num{font-size:2.5rem;font-weight:700;color:#0c5cb6;line-height:1}
+.headline-stat .label{font-size:0.95rem;color:#444;margin-top:0.25rem}
 table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.95rem}
 th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:left}
 th{background:#f0f4f8}
@@ -33,54 +34,97 @@ nav.breadcrumb a{color:#0c5cb6}
 footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
 a{color:#0c5cb6}</style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"Pre/Post BAPCPA Lookback Effect — Open Bankruptcy Project","description":"Empirical analysis of the § 1328(f) lookback rule's effect on successive Chapter 13 filings since 2005.","url":"https://1328f.openbankruptcyproject.org/findings/lookback-effect/"}
+{"@context":"https://schema.org","@type":"WebPage","name":"Pre/Post BAPCPA Lookback Effect — Open Bankruptcy Project","description":"Empirical pre/post BAPCPA analysis: counterfactual ~28% in early 1990s vs. 5-7% post-2005. Procedural reform under 26-BK-3.","url":"https://1328f.openbankruptcyproject.org/findings/lookback-effect/"}
 </script>
+<script type="application/ld+json">{
+"@context":"https://schema.org","@type":"Dataset",
+"name":"§ 1328(f) Successive-Filing Dataset v0.1",
+"description":"Empirical dataset of Chapter 13 successive-filing patterns and § 1328(f) lookback-bar incidence across 41 federal bankruptcy districts, 1990-2026. 211,537 cases analyzed; 1,018 § 1328(f) lookback-caught cases identified.",
+"url":"https://1328f.openbankruptcyproject.org/dataset/",
+"creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631","url":"https://openbankruptcyproject.org/"},
+"license":"https://creativecommons.org/licenses/by/4.0/",
+"datePublished":"2026-04-27",
+"keywords":["bankruptcy","§ 1328(f)","successive filing","Chapter 13","BAPCPA","empirical research"],
+"distribution":[
+{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://1328f.openbankruptcyproject.org/data/1328f_lookback_caught.csv"},
+{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://1328f.openbankruptcyproject.org/data/1328f_by_district.csv"},
+{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://1328f.openbankruptcyproject.org/data/1328f_by_year.csv"}
+]
+}</script>
 </head>
 <body>
 <nav class="breadcrumb"><a href="../../">&sect; 1328(f) Hub</a> &raquo; <a href="../">Findings</a> &raquo; Lookback Effect</nav>
 <span class="tag">Open Bankruptcy Project</span>
-<h1>The &sect; 1328(f) Lookback Effect &mdash; Pre/Post BAPCPA</h1>
-<p class="lead">Section 1328(f) was added to the Bankruptcy Code in 2005 by BAPCPA. Before BAPCPA there was no statutory bar on successive Chapter 13 discharges based on a recent prior discharge. This page examines the empirical effect of the rule's introduction.</p>
+<h1>The Pre/Post BAPCPA Lookback Effect</h1>
+<p class="lead">Section 1328(f) was added to the Bankruptcy Code in October 2005 by BAPCPA. This page
+analyzes the empirical effect of its introduction by comparing pre-2005 counterfactual rates with
+post-2005 actual rates in the dataset.</p>
 
-<h2>Pre-BAPCPA (before October 2005)</h2>
-<p>Under prior law, a debtor could chain successive Chapter 13 cases with no statutory lookback. Courts had some discretion under "good faith" doctrine to police abusive successive filings, but the constraint was discretionary, not categorical.</p>
+<h2>The pre/post comparison</h2>
+<table>
+<tr><th>Period</th><th>Successive Ch.13 filers in sample</th><th>Within lookback (or counterfactual)</th><th>Counterfactual / actual rate</th></tr>
+<tr><td>1993-1995 (pre-BAPCPA)</td><td>73</td><td>21</td><td>~28% counterfactual</td></tr>
+<tr><td>1996-2000 (pre-BAPCPA)</td><td>651</td><td>44</td><td>~7% counterfactual</td></tr>
+<tr><td>2001-2005 (transition)</td><td>3,719</td><td>282</td><td>~7.6%</td></tr>
+<tr><td>2006-2010 (post-BAPCPA)</td><td>2,475</td><td>156</td><td>~6.3%</td></tr>
+<tr><td>2011-2015 (post-BAPCPA)</td><td>2,889</td><td>183</td><td>~6.3%</td></tr>
+<tr><td>2016-2020 (post-BAPCPA)</td><td>3,634</td><td>189</td><td>~5.2%</td></tr>
+<tr><td>2021-2026 (post-BAPCPA)</td><td>2,343</td><td>143</td><td>~6.1%</td></tr>
+</table>
 
-<p>The empirical pattern pre-BAPCPA: successive Ch.13 filings were common but not viewed as systematically problematic. The 4/5-plan-completion rate was already low, so successive filings often represented attempts by struggling debtors to make a second attempt rather than abuse.</p>
+<h2>Reading the trend</h2>
+<p>Two patterns stand out:</p>
 
-<h2>Post-BAPCPA (October 2005 onward)</h2>
-<p>The rule's effect on filing behavior has been mixed:</p>
+<h3>1. The early-1990s spike</h3>
+<p>The 1993-1995 counterfactual rate (~28%) is dramatically higher than later years.
+Most likely explanation: the early-90s consumer bankruptcy environment had high
+recidivism rates because Chapter 13 was being used as a workout tool by debtors who didn't
+complete the first plan and tried again quickly. The dataset's small sample size in those years
+(only ~73 successive filers identified) makes the rate volatile.</p>
+
+<h3>2. The post-BAPCPA stabilization</h3>
+<p>From 2005 onward, the rate stabilizes in the 5-7% range. Several factors contribute:</p>
 <ul>
-<li><strong>Sophisticated filers</strong> (those with attorneys) generally screen for the lookback at intake. Successive Ch.13 filing where the bar applies dropped substantially in attorney-represented cases.</li>
-<li><strong>Pro-se filers</strong> have been less affected, because pro-se debtors often don't know the rule exists.</li>
-<li><strong>Plan completion + no discharge</strong> remains common: debtors who file pro-se Ch.13 with a recent prior discharge often complete the plan without realizing the lookback bars discharge until the very end.</li>
+<li><strong>Attorney screening:</strong> consumer bankruptcy attorneys check for prior discharges at intake.
+This filters out cases where the rule clearly applies before they ever get filed.</li>
+<li><strong>Pre-petition counsel knowledge:</strong> the rule is well-known among the bankruptcy bar
+post-2005; clients are advised when the rule will bar discharge.</li>
+<li><strong>Self-selection:</strong> debtors who would have been caught now wait out the lookback before
+re-filing.</li>
 </ul>
 
-<h2>The 2-year vs. 4-year asymmetry</h2>
-<p>The rule has different lookback periods for prior chapters:</p>
+<h3>3. The remaining 5-7%</h3>
+<p>The post-2005 rate doesn't fall to zero. The remaining cases are:</p>
 <ul>
-<li><strong>Prior Ch.7/11/12 discharge:</strong> 4-year lookback (longer because those discharges are typically full discharges of unsecured debt)</li>
-<li><strong>Prior Ch.13 discharge:</strong> 2-year lookback (shorter because Ch.13 discharges typically follow 3-5 years of plan payments)</li>
+<li>Pro-se filers unaware of the rule</li>
+<li>Cases where the prior bankruptcy outcome (transfer, conversion) created confusion about
+whether a "discharge" occurred</li>
+<li>Cases where the debtor reasonably believed enough time had passed</li>
+<li>Cases where the prior case had a non-standard discharge or dismissal pattern</li>
 </ul>
-<p>The asymmetry reflects Congress's view that Ch.13 plan completion already builds in a "cooling off" period through the plan duration itself.</p>
 
-<h2>Procedural reform</h2>
-<p>The Advisory Committee on Bankruptcy Rules accepted <strong>26-BK-3</strong> in March 2026 &mdash; a proposed amendment to Bankruptcy Rule 4004 to require &sect; 1328(f) screening at the petition stage. The aim is to catch lookback-barred cases at intake rather than at discharge, reducing the population of debtors who complete plans without learning of the bar until the end.</p>
+<h2>The procedural reform under 26-BK-3</h2>
+<p>The Advisory Committee on Bankruptcy Rules accepted 26-BK-3 in March 2026. The proposed amendment
+to Bankruptcy Rule 4004 would require &sect; 1328(f) screening at the petition stage, catching
+lookback-barred cases at intake rather than at discharge. The empirical work on this page supports
+the committee's analysis (Tab 4C, p. 125, fn. 4).</p>
 
-<p>The proposed rule is in the public-comment phase. The Open Bankruptcy Project's analysis was cited in the committee record (Tab 4C, p. 125 fn. 4).</p>
+<p>If 26-BK-3 is adopted in final form, future iterations of this dataset should show the post-2005
+5-7% rate decline further as the procedural screening reduces the population of pro-se filers
+who unknowingly trigger the bar.</p>
 <div class="related">
-<strong>Related research:</strong>
-<a href="https://1328f.openbankruptcyproject.org/">§ 1328(f) successive filing</a> &middot;
-<a href="https://subv.openbankruptcyproject.org/">Subchapter V</a> &middot;
-<a href="https://means-test.openbankruptcyproject.org/">Means test</a> &middot;
-<a href="https://automatic-stay.openbankruptcyproject.org/">Automatic stay</a> &middot;
-<a href="https://523a8.openbankruptcyproject.org/">§ 523(a)(8)</a> &middot;
-<a href="https://eidl.openbankruptcyproject.org/">EIDL</a> &middot;
-<a href="https://studentloans.openbankruptcyproject.org/">Student loans</a> &middot;
-<a href="https://viz.openbankruptcyproject.org/">Visualizations</a>
+<strong>Related:</strong>
+<a href="https://1328f.openbankruptcyproject.org/">§ 1328(f) hub</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/methodology/">Methodology</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/findings/">Findings</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/findings/by-district/">By district</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/findings/lookback-effect/">Lookback effect</a> &middot;
+<a href="https://1328f.openbankruptcyproject.org/dataset/">Dataset</a> &middot;
+<a href="https://github.com/openbankruptcyproject/obp-empirical-toolkit">Toolkit</a>
 </div>
 <footer>
-<p>Educational content only. Not legal advice. <strong>Open Bankruptcy Project</strong> &mdash;
-501(c)(3) public charity (EIN 41-5159631).
+<p>Empirical research published under CC BY 4.0. Methodology versioned in the public repository.
+Educational only; not legal advice. <strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
 <a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
 </footer>
 </body>
